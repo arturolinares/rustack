@@ -27,6 +27,18 @@ Rustack also uses askama to render templates, I think it fits really well the id
 
 It also has tailwindcss configured by default, you can easily remove it if you don't want it, note that there is a `build.rs` file that runs `yarn build` whenever any related file changes.
 
+## VS Code
+
+**NOTE**: Before opening the project in vscode configure it using `setup.sh`.
+
+The projecct contains a development enviroment for Visual Studio code. It will be configured automatically after opening the project in the editor. The environment contains:
+
+- PostgreSQL database server
+- sqlx-cli
+- Node
+- Yarn
+- Automatic migrations if `migrations` dir is found.
+
 ## Tech used
 
 Note: Currently rustack uses beta releases of some crates: actix-web and its related crates, lettre.
