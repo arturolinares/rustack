@@ -9,6 +9,7 @@ USER vscode
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 RUN bash -c 'source $HOME/.nvm/nvm.sh   && \
     nvm install node'
-RUN cargo install sqlx-cli --no-default-features --features postgres
+RUN cargo install sqlx-cli --no-default-features --features postgres \
+    && cargo install cargo-watch
 
 USER root
